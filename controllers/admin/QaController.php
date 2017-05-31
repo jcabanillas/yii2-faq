@@ -107,6 +107,7 @@ class QaController extends Controller
             return $this->render('update', [
                 'model'  => $model,
                 'groups' => FaqGroups::fetchAll(),
+                'group' => $model->group
             ]);
         }
     }
