@@ -3,15 +3,16 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\helpers\StringHelper;
+
 /* @var $this yii\web\View */
 /* @var $searchModel jcabanillas\faq\models\admin\qa\FaqQASearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 /* @var $group \jcabanillas\faq\models\FaqGroups */
 
 $this->title = Yii::t('faq', 'QA: manage «{name}» ({lang}/{code})', [
-    'name'  => StringHelper::truncate($group->name, 30),
-    'lang'  => $group->lang->name,
-    'code'  => $group->lang->code,
+    'name' => StringHelper::truncate($group->name, 30),
+    'lang' => $group->lang->name,
+    'code' => $group->lang->code,
 ]);
 $this->params['breadcrumbs'][] = ['label' => Yii::t('faq', 'Faq: Administration'), 'url' => ['/faq/admin/groups/index']];
 $this->params['breadcrumbs'][] = $this->title;
@@ -22,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('faq', 'Add question/answer'), ['create', 'gid' => $group->id ], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('faq', 'Add question/answer'), ['create', 'gid' => $group->id], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -41,18 +42,24 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             'id',
             'question:html',
-            'answer:html',
+            [
+                'attribute' => 'answer',
+                'type' => 'raw',
+                'value' => function ($model) {
+                    return Html::decode($model->answer);
+                }
+            ],
             'group.name',
             [
                 'attribute' => 'created_at',
-                'value' => function($model) {
+                'value' => function ($model) {
                     return Yii::$app->formatter->asRelativeTime($model->created_at);
                 },
                 'filterInputOptions' => ['style' => 'display: none;']
             ],
             [
                 'attribute' => 'updated_at',
-                'value' => function($model) {
+                'value' => function ($model) {
                     return Yii::$app->formatter->asRelativeTime($model->created_at);
                 },
                 'filterInputOptions' => ['style' => 'display: none;']
