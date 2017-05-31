@@ -4,15 +4,15 @@ namespace jcabanillas\faq\controllers\admin;
 
 use jcabanillas\faq\models\FaqGroups;
 use Yii;
-use jcabanillas\faq\models\FaqQA;
-use jcabanillas\faq\models\admin\qa\FaqQASearch;
+use jcabanillas\faq\models\FaqQa;
+use jcabanillas\faq\models\admin\qa\FaqQaSearch;
 use yii\db\ActiveRecord;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * QAController implements the CRUD actions for FaqQA model.
+ * QAController implements the CRUD actions for FaqQa model.
  */
 class QaController extends Controller
 {
@@ -34,7 +34,7 @@ class QaController extends Controller
     }
 
     /**
-     * Lists all FaqQA models.
+     * Lists all FaqQa models.
      * @var $gid integer group id
      * @return mixed
      */
@@ -43,7 +43,7 @@ class QaController extends Controller
         // find group
         $group =  $this->findModel($gid, FaqGroups::className());
 
-        $searchModel = new FaqQASearch();
+        $searchModel = new FaqQaSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider->query->andWhere(['group_id' => $group->id]);
 
@@ -55,7 +55,7 @@ class QaController extends Controller
     }
 
     /**
-     * Displays a single FaqQA model.
+     * Displays a single FaqQa model.
      * @param integer $id
      * @return mixed
      */
@@ -67,7 +67,7 @@ class QaController extends Controller
     }
 
     /**
-     * Creates a new FaqQA model.
+     * Creates a new FaqQa model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @var $id integer group id
      * @return mixed
@@ -76,8 +76,8 @@ class QaController extends Controller
     {
         // find group
         $group =  $this->findModel($gid, FaqGroups::className());
-        $model = new FaqQA();
-        $model->scenario = FaqQA::SCENARIO_CREATE;
+        $model = new FaqQa();
+        $model->scenario = FaqQa::SCENARIO_CREATE;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -91,7 +91,7 @@ class QaController extends Controller
     }
 
     /**
-     * Updates an existing FaqQA model.
+     * Updates an existing FaqQa model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -99,7 +99,7 @@ class QaController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        $model->scenario = FaqQA::SCENARIO_UPDATE;
+        $model->scenario = FaqQa::SCENARIO_UPDATE;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -112,7 +112,7 @@ class QaController extends Controller
     }
 
     /**
-     * Deletes an existing FaqQA model.
+     * Deletes an existing FaqQa model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -127,16 +127,16 @@ class QaController extends Controller
     }
 
     /**
-     * Finds the FaqQA model based on its primary key value.
+     * Finds the FaqQa model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
      * @param $class ActiveRecord
-     * @return FaqQA the loaded model
+     * @return FaqQa the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id, $class = null)
     {
-        $class = !isset($class) ? FaqQA::className() : $class;
+        $class = !isset($class) ? FaqQa::className() : $class;
 
         if (($model = $class::findOne($id)) !== null) {
             return $model;

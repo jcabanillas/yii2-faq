@@ -16,7 +16,7 @@ use yii\helpers\StringHelper;
  * @property integer $updated_at
  *
  * @property FaqLanguages $lang
- * @property FaqQa[] $faqQas
+ * @property FaqQa[] $FaqQas
  */
 class FaqGroups extends Faq
 {

@@ -6,14 +6,14 @@ use jcabanillas\faq\models\Faq;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use jcabanillas\faq\models\FaqQA;
+use jcabanillas\faq\models\FaqQa;
 use jcabanillas\faq\models\FaqGroups;
 use yii\db\ActiveQuery;
 
 /**
- * FaqQASearch represents the model behind the search form about `jcabanillas\faq\models\FaqQA`.
+ * FaqQaSearch represents the model behind the search form about `jcabanillas\faq\models\FaqQa`.
  */
-class FaqQASearch extends FaqQA
+class FaqQaSearch extends FaqQa
 {
     public function attributes()
     {
@@ -50,7 +50,7 @@ class FaqQASearch extends FaqQA
      */
     public function search($params)
     {
-        $query = FaqQA::find()->alias('qa')->with(['group']);
+        $query = FaqQa::find()->alias('qa')->with(['group']);
 
         // add conditions that should always apply here
 
