@@ -16,6 +16,8 @@ use yii\filters\VerbFilter;
  */
 class QaController extends Controller
 {
+    public $layout = '@backend/views/admin/main';
+
     /**
      * @inheritdoc
      */

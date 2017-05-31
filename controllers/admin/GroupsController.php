@@ -15,6 +15,8 @@ use yii\filters\VerbFilter;
  */
 class GroupsController extends Controller
 {
+    public $layout = '@backend/views/admin/main';
+
     /**
      * @inheritdoc
      */

@@ -6,32 +6,76 @@
  */
 
 use yii\helpers\Html;
+use yii\web\View;
 
 $this->title = Yii::t('faq', 'FAQ');
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
+    <div class="c-content-box c-size-md ">
+        <div class="container">
+            <?= $this->render('_search', ['model' => $model]) ?>
+            <div class="cbp-panel">
+                <div id="filters-container" class="cbp-l-filters-underline">
+                    <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
+                        Todas
+                    </div>
+                    <?php foreach ($groups as $g): ?>
+                        <div data-filter=".gid<?= $g->id ?>" class="cbp-filter-item">
+                            <?= $g->name ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
 
+                <div id="grid-container" class="cbp cbp-l-grid-faq">
+                    <?php
+                    $top = 0;
+                    foreach ($groups as $g):
+                        foreach ($g->faqQas as $qa):
+                            ?>
+                            <div class="cbp-item gid<?= $g->id ?>">
+                                <div class="cbp-caption">
+                                    <div class="cbp-caption-defaultWrap">
+                                        <i class="fa fa-check-circle-o"></i><?= $qa->question ?>
+                                    </div>
+                                    <div class="cbp-caption-activeWrap">
+                                        <div class="cbp-l-caption-body">
+                                            <?= Html::decode($qa->answer) ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                            $top += 47;
+                        endforeach;
+                    endforeach;
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php
+$js = <<<JS
+    (function ($, window, document, undefined) {
+        'use strict';
 
-<?= $this->render('_search', ['model' => $model ]) ?>
+// init cubeportfolio
+        $('#grid-container').cubeportfolio({
+            filters: '#filters-container',
+            defaultFilter: '*',
+            animationType: 'sequentially',
+            gridAdjustment: 'responsive',
+            displayType: 'default',
+            caption: 'expand',
+            mediaQueries: [{
+                width: 1,
+                cols: 1
+            }],
+            gapHorizontal: 0,
+            gapVertical: 0
+        });
 
-<div class="col-sm-4">
-    <?php foreach ($groups as $g): ?>
-        <h5><?= Html::a($g->name, ['index', 'gid' => $g->id], ['class' => 'faq-group-link']) ?></h5>
-    <?php endforeach; ?>
-</div>
-
-<div class="col-sm-8">
-    <h3 class="text-primary"><?= $group->name ?></h3>
-    <hr>
-    <br>
-    <?php if (count($group->faqQas)): ?>
-        <?php foreach ($group->faqQas as $qa): ?>
-            <h4><?= $qa->question ?></h4>
-            <h6><?= $qa->answer ?></h6>
-            <br>
-        <?php endforeach; ?>
-    <?php else: ?>
-            <h5><?= Yii::t('faq', 'No QA founded') ?></h5>
-    <?php endif; ?>
-</div>
+    })(jQuery, window, document);
+JS;
+$this->registerJs($js, View::POS_END, get_class($this) . "_faq");
+?>

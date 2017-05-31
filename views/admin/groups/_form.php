@@ -17,9 +17,9 @@ use yii\widgets\ActiveForm;
 
         <?= $form->field($model, 'lang_id')->dropDownList($langs)->label(Yii::t('faq', 'Select language')) ?>
 
-        <?//= $form->field($model, 'created_at')->textInput() ?>
+        <?php //= $form->field($model, 'created_at')->textInput() ?>
 
-        <?//= $form->field($model, 'updated_at')->textInput() ?>
+        <?php //= $form->field($model, 'updated_at')->textInput() ?>
 
         <div class="form-group">
             <?= Html::submitButton($model->isNewRecord ? Yii::t('faq', 'Create') : Yii::t('faq', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

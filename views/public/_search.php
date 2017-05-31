@@ -11,17 +11,21 @@ use yii\widgets\ActiveForm;
 
     <?php
 
-        $form = ActiveForm::begin([
-            'options'   => ['class' => 'form-inline faq-search'],
-            'action'    => 'search',
-            'method'    => 'GET'
-        ]);
+    $form = ActiveForm::begin([
+        // 'options'   => ['class' => 'form-inline faq-search'],
+        'options' => ['class' => 'faq-search'],
+        'action' => 'search',
+        'method' => 'GET'
+    ]);
     ?>
-
-    <?= $form->field($model, 'text', ['inputOptions' => ['class' => 'form-control', 'placeholder' => Yii::t('faq', 'Text to search...')]])->label('') ?>
-
-    <?= Html::submitButton(Yii::t('faq', 'Find'), ['class' => 'btn btn-success']) ?>
-
+    <div class="row">
+        <div class="col-sm-6">
+            <?= $form->field($model, 'text', ['inputOptions' => ['class' => 'form-control c-square c-theme input-lg', 'placeholder' => Yii::t('faq', 'Texto a buscar...')]])->label(false) ?>
+        </div>
+        <div class="col-sm-3">
+            <?= Html::submitButton(Yii::t('faq', 'Buscar'), ['class' => 'btn c-theme-btn c-btn-uppercase btn-lg c-btn-bold c-btn-square']) ?>
+        </div>
+    </div>
     <?php ActiveForm::end(); ?>
     <br>
     <br>

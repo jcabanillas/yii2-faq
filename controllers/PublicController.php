@@ -10,6 +10,8 @@ use yii\web\NotFoundHttpException;
 
 class PublicController extends Controller
 {
+    public $layout = '@frontend/web/themes/jango/views/layouts/main';
+
     /**
      * Default action - show groups (and QA)
      * @param $gid integer group ID
