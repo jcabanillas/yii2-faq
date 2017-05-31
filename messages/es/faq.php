@@ -23,14 +23,15 @@ return [
     'Select group'                          => 'Seleccionar grupo',
     'Update QA'                             => 'Actualizar QA',
     'View QA'                               => 'Ver QA',
-    'Add group'                             => 'Добавить группу',
-    'Group Name'                            => 'Название группы',
-    'Home'                                  => 'Главная',
-    'Invalid language code specified application or such language was not added to the database!' => 'Неверное указан код языка приложения, либо такой язык не был добавлен в базу!',
-    'Find'                                  => 'Найти',
-    'Text to search'                        => 'Текст для поиска',
-    'Search by FAQ'                         => 'Поиск по FAQ',
-    'Text to search...'                     => 'Текст для поиска',
-    'Search results by «{query}»'           => 'Результаты поиска по запросу «{query}»',
-    'No QA founded'                         => 'В этой группе нет вопросов'
+    'Add group'                             => 'Agregar grupo',
+    'Group Name'                            => 'Nombre de Grupo',
+    'Home'                                  => 'Inicio',
+    'Invalid language code specified application or such language was not added to the database!'
+    => '¡El código de idioma especificado es inválido o no ha sido agregado a la base de datos!',
+    'Find'                                  => 'Buscar',
+    'Text to search'                        => 'Texto a buscar',
+    'Search by FAQ'                         => 'Buscar por FAQ',
+    'Text to search...'                     => 'Texto a buscar...',
+    'Search results by «{query}»'           => 'Resultados de búsqueda por «{query}»',
+    'No QA founded'                         => 'No se ha encontrado QA'
 ];
