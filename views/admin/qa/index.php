@@ -44,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'question:html',
             [
                 'attribute' => 'answer',
-                'type' => 'raw',
+                'format' => 'raw',
                 'value' => function ($model) {
                     return Html::decode($model->answer);
                 }
