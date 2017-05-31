@@ -1,6 +1,6 @@
 <?php
 
-namespace ando\faq\models;
+namespace jcabanillas\faq\models;
 
 use yii;
 use yii\base\Model;

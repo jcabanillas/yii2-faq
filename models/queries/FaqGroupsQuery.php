@@ -1,14 +1,14 @@
 <?php
 
-namespace ando\faq\models\queries;
+namespace jcabanillas\faq\models\queries;
 
 /**
- * This is the ActiveQuery class for [[\ando\faq\models\FaqGroups]].
+ * This is the ActiveQuery class for [[\jcabanillas\faq\models\FaqGroups]].
  *
- * @see \ando\faq\models\FaqGroups
+ * @see \jcabanillas\faq\models\FaqGroups
  */
 
-use ando\faq\models\FaqLanguages;
+use jcabanillas\faq\models\FaqLanguages;
 use yii\db\ActiveQuery;
 
 class FaqGroupsQuery extends \yii\db\ActiveQuery
@@ -38,7 +38,7 @@ class FaqGroupsQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return \ando\faq\models\FaqGroups[]|array
+     * @return \jcabanillas\faq\models\FaqGroups[]|array
      */
     public function all($db = null)
     {
@@ -47,7 +47,7 @@ class FaqGroupsQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return \ando\faq\models\FaqGroups|array|null
+     * @return \jcabanillas\faq\models\FaqGroups|array|null
      */
     public function one($db = null)
     {

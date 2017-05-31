@@ -1,6 +1,6 @@
 <?php
 
-namespace ando\faq\models;
+namespace jcabanillas\faq\models;
 
 use yii;
 use yii\db\ActiveRecord;
@@ -8,7 +8,7 @@ use yii\db\ActiveRecord;
 /**
  * Base Class for FAQ classes
  * Class Faq
- * @package ando\faq\models
+ * @package jcabanillas\faq\models
  */
 class Faq extends ActiveRecord
 {

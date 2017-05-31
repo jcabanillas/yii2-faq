@@ -1,11 +1,11 @@
 <?php
 
-namespace ando\faq\controllers\admin;
+namespace jcabanillas\faq\controllers\admin;
 
-use ando\faq\models\FaqGroups;
+use jcabanillas\faq\models\FaqGroups;
 use Yii;
-use ando\faq\models\FaqQA;
-use ando\faq\models\admin\qa\FaqQASearch;
+use jcabanillas\faq\models\FaqQA;
+use jcabanillas\faq\models\admin\qa\FaqQASearch;
 use yii\db\ActiveRecord;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

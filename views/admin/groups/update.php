@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\helpers\StringHelper;
 
 /* @var $this yii\web\View */
-/* @var $model ando\faq\models\FaqGroups */
+/* @var $model jcabanillas\faq\models\FaqGroups */
 /* @var $langs array */
 
 $this->title = Yii::t('faq', 'Update group: «{name}»', [

@@ -1,11 +1,11 @@
 <?php
 
-namespace ando\faq\models\queries;
+namespace jcabanillas\faq\models\queries;
 
 /**
- * This is the ActiveQuery class for [[\ando\faq\models\FaqQa]].
+ * This is the ActiveQuery class for [[\jcabanillas\faq\models\FaqQa]].
  *
- * @see \ando\faq\models\FaqQa
+ * @see \jcabanillas\faq\models\FaqQa
  */
 class FaqQaQuery extends \yii\db\ActiveQuery
 {
@@ -16,7 +16,7 @@ class FaqQaQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return \ando\faq\models\FaqQa[]|array
+     * @return \jcabanillas\faq\models\FaqQa[]|array
      */
     public function all($db = null)
     {
@@ -25,7 +25,7 @@ class FaqQaQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return \ando\faq\models\FaqQa|array|null
+     * @return \jcabanillas\faq\models\FaqQa|array|null
      */
     public function one($db = null)
     {

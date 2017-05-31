@@ -1,6 +1,6 @@
 <?php
 
-namespace ando\faq;
+namespace jcabanillas\faq;
 
 use yii\base\Module as BaseModule;
 

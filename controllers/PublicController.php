@@ -1,9 +1,9 @@
 <?php
 
-namespace ando\faq\controllers;
+namespace jcabanillas\faq\controllers;
 
-use ando\faq\models\FaqGroups;
-use ando\faq\models\FaqSearch;
+use jcabanillas\faq\models\FaqGroups;
+use jcabanillas\faq\models\FaqSearch;
 use yii\web\Controller;
 use yii;
 use yii\web\NotFoundHttpException;

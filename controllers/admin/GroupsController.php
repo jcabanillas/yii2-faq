@@ -1,11 +1,11 @@
 <?php
 
-namespace ando\faq\controllers\admin;
+namespace jcabanillas\faq\controllers\admin;
 
-use ando\faq\models\FaqLanguages;
+use jcabanillas\faq\models\FaqLanguages;
 use Yii;
-use ando\faq\models\FaqGroups;
-use ando\faq\models\admin\groups\FaqGroupsSearch;
+use jcabanillas\faq\models\FaqGroups;
+use jcabanillas\faq\models\admin\groups\FaqGroupsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

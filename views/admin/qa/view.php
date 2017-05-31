@@ -5,7 +5,7 @@ use yii\widgets\DetailView;
 use yii\helpers\StringHelper;
 
 /* @var $this yii\web\View */
-/* @var $model ando\faq\models\FaqQA */
+/* @var $model jcabanillas\faq\models\FaqQA */
 
 $this->title = Yii::t('faq', 'View QA');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('faq', 'Faq: Administration'), 'url' => ['/faq/admin/groups/index']];

@@ -4,9 +4,9 @@ use yii\helpers\Html;
 use yii\helpers\StringHelper;
 
 /* @var $this yii\web\View */
-/* @var $model ando\faq\models\FaqQA */
+/* @var $model jcabanillas\faq\models\FaqQA */
 /** @var $groups array */
-/** @var $group \ando\faq\models\FaqGroups */
+/** @var $group \jcabanillas\faq\models\FaqGroups */
 
 $this->title = Yii::t('faq', 'Create a question/answer');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('faq', 'Faq: Administration'), 'url' => ['/faq/admin/groups/index']];

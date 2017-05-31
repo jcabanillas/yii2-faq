@@ -1,8 +1,8 @@
 <?php
 /**
- * @var $groups \ando\faq\models\FaqGroups[] All Groups with current language
- * @var $group \ando\faq\models\FaqGroups Current group
- * @var $model \ando\faq\models\FaqSearch
+ * @var $groups \jcabanillas\faq\models\FaqGroups[] All Groups with current language
+ * @var $group \jcabanillas\faq\models\FaqGroups Current group
+ * @var $model \jcabanillas\faq\models\FaqSearch
  */
 
 use yii\helpers\Html;

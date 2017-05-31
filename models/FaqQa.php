@@ -1,6 +1,6 @@
 <?php
 
-namespace ando\faq\models;
+namespace jcabanillas\faq\models;
 
 use Yii;
 use yii\behaviors\TimestampBehavior;
@@ -97,10 +97,10 @@ class FaqQa extends Faq
 
     /**
      * @inheritdoc
-     * @return \ando\faq\models\queries\FaqQaQuery the active query used by this AR class.
+     * @return \jcabanillas\faq\models\queries\FaqQaQuery the active query used by this AR class.
      */
     public static function find()
     {
-        return new \ando\faq\models\queries\FaqQaQuery(get_called_class());
+        return new \jcabanillas\faq\models\queries\FaqQaQuery(get_called_class());
     }
 }

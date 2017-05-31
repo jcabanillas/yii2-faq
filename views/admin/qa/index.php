@@ -4,9 +4,9 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\helpers\StringHelper;
 /* @var $this yii\web\View */
-/* @var $searchModel ando\faq\models\admin\qa\FaqQASearch */
+/* @var $searchModel jcabanillas\faq\models\admin\qa\FaqQASearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-/* @var $group \ando\faq\models\FaqGroups */
+/* @var $group \jcabanillas\faq\models\FaqGroups */
 
 $this->title = Yii::t('faq', 'QA: manage «{name}» ({lang}/{code})', [
     'name'  => StringHelper::truncate($group->name, 30),

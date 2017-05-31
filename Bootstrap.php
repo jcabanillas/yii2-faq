@@ -1,6 +1,6 @@
 <?php
 
-namespace ando\faq;
+namespace jcabanillas\faq;
 
 use yii;
 use yii\base\BootstrapInterface;
@@ -9,7 +9,7 @@ use yii\console\Application as ConsoleApplication;
 
 /**
  * Class Bootstrap
- * @package ando\faq
+ * @package jcabanillas\faq
  */
 class Bootstrap implements BootstrapInterface
 {

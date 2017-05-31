@@ -20,7 +20,7 @@ Add repo to your composer.json
 and run
 
 ```
-php composer.phar require ando/yii2-faq:dev-master
+php composer.phar require jcabanillas/yii2-faq:dev-master
 ```
 
 Usage
@@ -31,7 +31,7 @@ Once the extension is installed, simply use it in your code by  :
 
 - **Применить миграции**
 ```
-yii migrate -p=@ando/faq/migrations
+yii migrate -p=@jcabanillas/faq/migrations
 ```
 
 - **Инициализация**
@@ -40,7 +40,7 @@ yii migrate -p=@ando/faq/migrations
 
 ```php
 'modules'   => [
-    'faq'   => 'ando\faq\Module',
+    'faq'   => 'jcabanillas\faq\Module',
 ],
 ```
 

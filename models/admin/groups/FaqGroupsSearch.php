@@ -1,17 +1,17 @@
 <?php
 
-namespace ando\faq\models\admin\groups;
+namespace jcabanillas\faq\models\admin\groups;
 
-use ando\faq\models\Faq;
-use ando\faq\models\FaqLanguages;
+use jcabanillas\faq\models\Faq;
+use jcabanillas\faq\models\FaqLanguages;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use ando\faq\models\FaqGroups;
+use jcabanillas\faq\models\FaqGroups;
 use yii\db\ActiveQuery;
 
 /**
- * FaqGroupsSearch represents the model behind the search form about `ando\faq\models\FaqGroups`.
+ * FaqGroupsSearch represents the model behind the search form about `jcabanillas\faq\models\FaqGroups`.
  */
 class FaqGroupsSearch extends FaqGroups
 {

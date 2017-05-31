@@ -1,11 +1,11 @@
 <?php
 
-namespace ando\faq\models\queries;
+namespace jcabanillas\faq\models\queries;
 
 /**
- * This is the ActiveQuery class for [[\ando\faq\models\FaqLanguages]].
+ * This is the ActiveQuery class for [[\jcabanillas\faq\models\FaqLanguages]].
  *
- * @see \ando\faq\models\FaqLanguages
+ * @see \jcabanillas\faq\models\FaqLanguages
  */
 class FaqLanguagesQuery extends \yii\db\ActiveQuery
 {
@@ -16,7 +16,7 @@ class FaqLanguagesQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return \ando\faq\models\FaqLanguages[]|array
+     * @return \jcabanillas\faq\models\FaqLanguages[]|array
      */
     public function all($db = null)
     {
@@ -25,7 +25,7 @@ class FaqLanguagesQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return \ando\faq\models\FaqLanguages|array|null
+     * @return \jcabanillas\faq\models\FaqLanguages|array|null
      */
     public function one($db = null)
     {

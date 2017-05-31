@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @var $model \ando\faq\models\FaqSearch
+ * @var $model \jcabanillas\faq\models\FaqSearch
  */
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;

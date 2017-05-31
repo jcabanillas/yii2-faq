@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @var $model \ando\faq\models\FaqSearch
- * @var $qas \ando\faq\models\FaqQa[]
+ * @var $model \jcabanillas\faq\models\FaqSearch
+ * @var $qas \jcabanillas\faq\models\FaqQa[]
  */
 
 use yii\helpers\Html;

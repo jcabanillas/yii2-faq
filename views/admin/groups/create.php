@@ -4,8 +4,8 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model ando\faq\models\FaqGroups */
-/* @var $langs ando\faq\models\FaqLanguages */
+/* @var $model jcabanillas\faq\models\FaqGroups */
+/* @var $langs jcabanillas\faq\models\FaqLanguages */
 
 $this->title = Yii::t('faq', 'Add new group');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('faq', 'Faq: Administration'), 'url' => ['index']];

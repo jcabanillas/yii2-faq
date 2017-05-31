@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\helpers\StringHelper;
 
 /* @var $this yii\web\View
- * @var $model ando\faq\models\FaqQA
+ * @var $model jcabanillas\faq\models\FaqQA
  * @var $groups array
  * @var $langs array
  */

@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model ando\faq\models\FaqGroups */
+/* @var $model jcabanillas\faq\models\FaqGroups */
 
 $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('faq', 'Faq: Administration'), 'url' => ['index']];
