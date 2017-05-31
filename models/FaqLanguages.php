@@ -16,7 +16,7 @@ use yii\behaviors\TimestampBehavior;
  * @property integer $updated_at
  *
  * @property FaqGroups[] $faqGroups
- * @property FaqQa[] $FaqQas
+ * @property FaqQa[] $faqQas
  */
 class FaqLanguages extends Faq
 {

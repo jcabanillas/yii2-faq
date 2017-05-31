@@ -92,7 +92,7 @@ class FaqQa extends Faq
      */
     public function getGroup()
     {
-        return $this->hasOne(FaqGroups::className(), ['id' => 'group_id'])->inverseOf('FaqQas');
+        return $this->hasOne(FaqGroups::className(), ['id' => 'group_id'])->inverseOf('faqQas');
     }
 
     /**
